@@ -4,9 +4,26 @@ $model = new Kartu();
 $kartu = $model->getKartu($id);
 ?>
 
-<div>
-    <label>Kode : <?= $kartu['kode'] ?></label><br>
-    <label>Nama Kartu : <?= $kartu['nama'] ?></label><br>
-    <label>Diskon : <?= $kartu['diskon'] ?></label><br>
-    <label>Iuran : <?= $kartu['iuran'] ?></label><br>
+<h1 class="mt-4">Detail Kartu</h1>
+<div class="card-body">
+    <div class="card mb-4">
+        <table id="datatablesSimple">
+            <thead>
+                <tr>
+                    <th>Kode</th>
+                    <th>Nama </th>
+                    <th>Diskon</th>
+                    <th>Iuran</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><?= $kartu['kode']?></td>
+                    <td><?= $kartu['nama']?></td>
+                    <td><?= $kartu['diskon']?></td>
+                    <td><?= $kartu['iuran']?></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>

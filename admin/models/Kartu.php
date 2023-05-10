@@ -26,6 +26,18 @@ class Kartu {
         $ps = $this->koneksi->prepare($sql);
         $ps->execute($data);
     }
+
+    public function ubah($data){
+        $sql = "UPDATE kartu SET kode=?, nama=?, diskon=?, iuran=? WHERE id=?";
+        $ps = $this->koneksi->prepare($sql);
+        $ps->execute($data);
+    }
+    
+    public function hapus($id){
+        $sql = "DELETE FROM kartu WHERE id=?";
+        $ps = $this->koneksi->prepare($sql);
+        $ps->execute([$id]);
+    }
 }
 
 
